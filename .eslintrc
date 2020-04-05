@@ -1,0 +1,53 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:cypress/recommended",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "jest": true
+  },
+  "globals": {
+    "polyglot": true,
+    "window": false
+  },
+  "plugins": [
+    "import",
+    "jsx-a11y",
+    "react",
+    "prettier"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "no-console": "off",
+    // allow underscore dangles for certain external variable names
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "__coverage__",
+          "__REDUX_DEVTOOLS_EXTENSION__",
+          "_embedded"
+        ]
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error", {
+        "components": [ "Link" ],
+        "specialLink": [ "to", "hrefLeft", "hrefRight" ],
+        "aspects": [ "noHref", "invalidHref", "preferButton" ]
+      }
+    ],
+    "import/no-named-as-default": 0
+  }
+}
+  
